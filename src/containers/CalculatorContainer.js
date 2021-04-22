@@ -6,7 +6,10 @@ import OutputBL from "../components/OutputBL"
 const MortgageCalculator = (() => {
   const [income, setIncome] = useState(0)
 
-
+console.log(income);
+  const calculateLoan = function(income){
+      return income * 3;
+  }
 
 
 
