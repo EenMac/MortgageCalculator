@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from "react"
 import Income from "../components/Income"
+import OutputBL from "../components/OutputBL"
 
 
 const MortgageCalculator = (() => {
@@ -14,7 +15,7 @@ const MortgageCalculator = (() => {
         <div>
             <h1>Mortagage calc</h1>
                 <Income />
-            
+            <OutputBL />
         </div>
     )
 })
