@@ -8,7 +8,7 @@ const MortgageCalculator = (() => {
 
 console.log(income);
   const calculateLoan = function(income){
-      return income * 3;
+      setIncome(income * 3);
   }
 
 
@@ -16,9 +16,9 @@ console.log(income);
 
     return(
         <div>
-            <h1>Mortagage calc</h1>
-                <Income />
-            <OutputBL />
+            <h1>Mortagage calculator</h1>
+                <Income calculateLoan = {calculateLoan}/>
+            <OutputBL income = {income}/>
         </div>
     )
 })

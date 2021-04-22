@@ -1,24 +1,30 @@
 import React, { useState } from "react";
 
 
-const Income = (() => {
+const Income = ({calculateLoan}) => {
 
-const[income,setIncome] = useState("")
+    const [income, setIncome] = useState("")
 
 const handleIncomeChange =event => {
     setIncome(event.target.value);
 }
 const handleIncomeSubmit = (event)=> {
-    const incomeToSubmit = income.trim();
-
+    event.preventDefault();
+    const incomeToSubmit = parseInt(income.trim());
+    console.log(incomeToSubmit);
+    calculateLoan(incomeToSubmit)
 }
+
 
     return(
         <div>
+            <form>
             <label for= "income">Your annual Income</label>
-            <input type="text" id = "income" name = "income" onChange = {handleIncomeChange}></input>
+            <input type="text" id = "income" name = "income" onChange = {handleIncomeChange} ></input>
+            <button onClick={handleIncomeSubmit}>Calculate</button> 
+            </form>
         </div>
     )
 
-})
+}
 export default Income;
