@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState, useEffect} from "react"
+import Income from "../components/Income"
 
 
 const MortgageCalculator = (() => {
-  
+  const [income, setIncome] = useState(0)
 
 
 
@@ -11,7 +12,9 @@ const MortgageCalculator = (() => {
 
     return(
         <div>
-            <h1>Mortagage Calculator</h1>
+            <h1>Mortagage calc</h1>
+                <Income />
+            
         </div>
     )
 })
