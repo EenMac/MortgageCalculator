@@ -3,10 +3,11 @@ import Income from "./Income"
 import MortgageCalculator from "../containers/CalculatorContainer"; 
 
 const OutputBL = (({income}) => {
-  
-    const calculateLoan = function(income){
-        return income * 3;
+
+    const calculateLoan = function({income}){
+        console.log(income * 3);
     }
+
     const handleChange = function(event){
         const output = income[event.target.value];
         calculateLoan(output)
@@ -16,7 +17,7 @@ const OutputBL = (({income}) => {
         <div>
             <h2>Mortgage Borrowing limit</h2>
             <Income onChange = {handleChange} />
-            <button>Calculate</button> 
+            {/* <button>Calculate</button>  */}
         </div>
         
     )
