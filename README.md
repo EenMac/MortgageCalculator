@@ -1,3 +1,6 @@
+An app for a simple mortgae calculator which takes an input and multiplies by an interest rate.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
